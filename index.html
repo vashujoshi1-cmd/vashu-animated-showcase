@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vashu's Animation Showcase - Web Design & Development Services</title>
-    <meta name="description" content="Professional web design, animation, and development services. Explore stunning animations, hire for projects, and learn web development tips.">
-    <meta name="keywords" content="web design, animation, development, freelance, portfolio, CSS animations, JavaScript">
-    <meta name="author" content="Vashu">
+    <title>Vashu's Animation Showcase - Best Web Animations & Effects</title>
     
-    <!-- Open Graph for Social Media -->
-    <meta property="og:title" content="Vashu's Animation Showcase">
-    <meta property="og:description" content="Professional web design and animation services">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore stunning web animations, 3D effects, interactive cards, and beautiful UI designs. Free animation showcase with particle effects, text animations, and more!">
+    <meta name="keywords" content="web animations, 3D effects, CSS animations, interactive design, particle effects, text animations, web design showcase">
+    <meta name="author" content="Vashu">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
+    <meta property="og:title" content="Vashu's Animation Showcase - Stunning Web Animations">
+    <meta property="og:description" content="Explore amazing web animations including 3D cards, particle effects, and interactive designs!">
+    <meta property="og:url" content="https://vashujoshi1-cmd.github.io/vashu-animated-showcase/">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vashu's Animation Showcase">
+    <meta name="twitter:description" content="Stunning web animations and interactive effects!">
     
     <!-- Google AdSense - Replace with your AdSense ID -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
@@ -29,44 +38,6 @@
             background: #0a0a0a;
             color: #fff;
             overflow-x: hidden;
-        }
-
-        /* Navigation Bar */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10, 10, 10, 0.95);
-            padding: 15px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-        }
-
-        nav .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #4ecdc4;
         }
 
         /* Particle Background */
@@ -102,7 +73,6 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            padding-top: 60px;
         }
 
         .hero h1 {
@@ -132,46 +102,29 @@
             animation: fadeIn 1s ease 0.5s forwards;
         }
 
-        .hero .cta-buttons {
-            margin-top: 40px;
-            display: flex;
-            gap: 20px;
-            opacity: 0;
-            animation: fadeIn 1s ease 1s forwards;
-        }
-
-        .cta-btn {
-            padding: 15px 40px;
-            font-size: 1.1rem;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .cta-primary {
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            color: white;
-        }
-
-        .cta-secondary {
-            background: transparent;
-            border: 2px solid #4ecdc4;
-            color: #4ecdc4;
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(78, 205, 196, 0.4);
-        }
-
         @keyframes fadeIn {
             to { opacity: 1; }
         }
 
-        /* Section Styles */
+        /* Ad Container */
+        .ad-container {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 728px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .ad-placeholder {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 8px;
+            color: #888;
+        }
+
+        /* 3D Card Section */
         .section {
             min-height: 100vh;
             padding: 100px 50px;
@@ -187,292 +140,6 @@
             text-align: center;
         }
 
-        /* AdSense Ad Slot */
-        .ad-container {
-            width: 100%;
-            max-width: 970px;
-            margin: 40px auto;
-            text-align: center;
-            padding: 20px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 10px;
-        }
-
-        /* Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            width: 100%;
-            max-width: 1200px;
-        }
-
-        .service-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 40px;
-            border-radius: 20px;
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .service-card h3 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-        .service-card .price {
-            font-size: 1.5rem;
-            color: #f7b731;
-            margin: 15px 0;
-        }
-
-        /* Blog Section */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            width: 100%;
-            max-width: 1200px;
-        }
-
-        .blog-card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 15px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .blog-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .blog-content {
-            padding: 25px;
-        }
-
-        .blog-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .blog-card .date {
-            color: #4ecdc4;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        /* Affiliate Section */
-        .affiliate-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            width: 100%;
-            max-width: 1200px;
-        }
-
-        .affiliate-card {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .affiliate-card:hover {
-            transform: scale(1.05);
-        }
-
-        .affiliate-btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 30px;
-            background: white;
-            color: #f5576c;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-
-        .affiliate-btn:hover {
-            background: #f7b731;
-            color: white;
-        }
-
-        /* Contact Form */
-        .contact-form {
-            width: 100%;
-            max-width: 600px;
-            background: rgba(255,255,255,0.05);
-            padding: 40px;
-            border-radius: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: #4ecdc4;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid rgba(78, 205, 196, 0.3);
-            background: rgba(255,255,255,0.05);
-            color: white;
-            border-radius: 8px;
-            font-size: 1rem;
-        }
-
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            border: none;
-            border-radius: 8px;
-            color: white;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-3px);
-        }
-
-        /* Newsletter */
-        .newsletter {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 60px 40px;
-            border-radius: 20px;
-            text-align: center;
-            max-width: 800px;
-            margin: 50px auto;
-        }
-
-        .newsletter h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .newsletter-form {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .newsletter-form input {
-            flex: 1;
-            min-width: 250px;
-            padding: 15px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-        }
-
-        .newsletter-form button {
-            padding: 15px 40px;
-            background: #f7b731;
-            border: none;
-            border-radius: 8px;
-            color: white;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .newsletter-form button:hover {
-            background: #ff6b6b;
-        }
-
-        /* Donation Section */
-        .donation-section {
-            text-align: center;
-            padding: 60px 40px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            max-width: 600px;
-            margin: 50px auto;
-        }
-
-        .donation-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 40px;
-            background: #f7b731;
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            transition: all 0.3s;
-        }
-
-        .donation-btn:hover {
-            background: #ff6b6b;
-            transform: scale(1.05);
-        }
-
-        /* Social Links */
-        .social-links {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        .social-btn {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: white;
-            font-size: 1.5rem;
-            transition: transform 0.3s;
-        }
-
-        .social-btn:hover {
-            transform: scale(1.2);
-        }
-
-        /* Footer */
-        footer {
-            background: rgba(10, 10, 10, 0.95);
-            padding: 40px;
-            text-align: center;
-            margin-top: 100px;
-        }
-
-        footer p {
-            color: #888;
-        }
-
-        /* 3D Cards Section */
         .cards-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -517,6 +184,111 @@
             margin-bottom: 15px;
         }
 
+        /* Interactive Buttons */
+        .button-section {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .animated-btn {
+            padding: 20px 40px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .btn-pulse {
+            background: #ff6b6b;
+            color: white;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .btn-glow {
+            background: #4ecdc4;
+            color: white;
+            box-shadow: 0 0 20px #4ecdc4;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px #4ecdc4; }
+            50% { box-shadow: 0 0 40px #4ecdc4, 0 0 60px #4ecdc4; }
+        }
+
+        .btn-wave {
+            background: #f7b731;
+            color: white;
+        }
+
+        .btn-wave::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn-wave:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Text Animation Section */
+        .text-animations {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .typing-text {
+            font-size: 2rem;
+            border-right: 3px solid #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 4s steps(40) infinite, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            0%, 100% { width: 0; }
+            50% { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        .glitch-text {
+            font-size: 3rem;
+            position: relative;
+            animation: glitch 1s infinite;
+        }
+
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+        }
+
         /* Scroll Animation */
         .scroll-reveal {
             opacity: 0;
@@ -529,223 +301,199 @@
             transform: translateY(0);
         }
 
+        /* Floating Shapes */
+        .shapes-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            margin: 50px 0;
+        }
+
+        .shape {
+            position: absolute;
+            animation: rotate 10s linear infinite;
+        }
+
+        .shape:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            top: 20%;
+            left: 10%;
+            animation-duration: 8s;
+        }
+
+        .shape:nth-child(2) {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #f7b731, #45b7d1);
+            top: 60%;
+            left: 70%;
+            border-radius: 50%;
+            animation-duration: 12s;
+        }
+
+        .shape:nth-child(3) {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(45deg, #764ba2, #667eea);
+            top: 40%;
+            left: 50%;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            animation-duration: 10s;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 50px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            background: white;
+            color: #667eea;
+            padding: 20px 50px;
+            font-size: 1.3rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            padding: 40px;
+            text-align: center;
+        }
+
+        footer p {
+            color: #888;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 { font-size: 3rem; }
             .section h2 { font-size: 2rem; }
-            nav { padding: 15px 20px; }
-            nav ul { display: none; }
-            .section { padding: 80px 20px; }
+            .cards-container { grid-template-columns: 1fr; }
+            .typing-text { font-size: 1.5rem; }
+            .glitch-text { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">Vashu's Portfolio</div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
     <!-- Particle Background -->
     <div id="particles"></div>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero">
         <h1>✨ Animation Showcase ✨</h1>
-        <p>Professional Web Design & Development Services</p>
-        <div class="cta-buttons">
-            <a href="#services" class="cta-btn cta-primary">Hire Me</a>
-            <a href="#contact" class="cta-btn cta-secondary">Get in Touch</a>
-        </div>
+        <p>Discover the most stunning web animations & effects!</p>
     </section>
 
-    <!-- AdSense Ad Slot 1 -->
+    <!-- Ad Space 1 -->
     <div class="ad-container">
-        <!-- Replace with your AdSense code -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-             data-ad-slot="XXXXXXXXXX"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        <div class="ad-placeholder">
+            📢 Advertisement Space - Add your Google AdSense code here
+        </div>
     </div>
 
-    <!-- Services Section -->
-    <section class="section scroll-reveal" id="services">
-        <h2>💼 My Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>🎨 Web Design</h3>
-                <p>Beautiful, responsive websites with stunning animations</p>
-                <div class="price">Starting at ₹5,000</div>
-                <a href="#contact" class="cta-btn cta-primary">Order Now</a>
-            </div>
-            <div class="service-card">
-                <h3>💻 Web Development</h3>
-                <p>Full-stack development with modern technologies</p>
-                <div class="price">Starting at ₹10,000</div>
-                <a href="#contact" class="cta-btn cta-primary">Order Now</a>
-            </div>
-            <div class="service-card">
-                <h3>🚀 Animation Services</h3>
-                <p>Custom CSS & JavaScript animations for your site</p>
-                <div class="price">Starting at ₹3,000</div>
-                <a href="#contact" class="cta-btn cta-primary">Order Now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3D Cards Demo -->
+    <!-- 3D Cards Section -->
     <section class="section scroll-reveal">
-        <h2>🎴 Interactive Animations</h2>
+        <h2>🎴 3D Interactive Cards</h2>
         <div class="cards-container">
             <div class="card-3d">
-                <h3>3D Effects</h3>
-                <p>Hover over me to see 3D rotation effect!</p>
+                <h3>Smooth 3D</h3>
+                <p>Hover over me to see amazing 3D rotation effects with smooth transitions!</p>
             </div>
             <div class="card-3d">
-                <h3>Smooth Transitions</h3>
-                <p>Interactive and smooth animations</p>
+                <h3>Interactive</h3>
+                <p>Experience real-time mouse tracking and interactive animations</p>
             </div>
             <div class="card-3d">
-                <h3>Modern Design</h3>
-                <p>Beautiful gradient backgrounds</p>
+                <h3>Beautiful</h3>
+                <p>Stunning gradient backgrounds with glassmorphism effects</p>
             </div>
         </div>
     </section>
 
-    <!-- AdSense Ad Slot 2 -->
+    <!-- Ad Space 2 -->
     <div class="ad-container">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-             data-ad-slot="XXXXXXXXXX"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        <div class="ad-placeholder">
+            📢 Advertisement Space - Add your Google AdSense code here
+        </div>
     </div>
 
-    <!-- Blog Section -->
-    <section class="section scroll-reveal" id="blog">
-        <h2>📝 Latest Blog Posts</h2>
-        <div class="blog-grid">
-            <div class="blog-card">
-                <div class="blog-content">
-                    <div class="date">Dec 2, 2025</div>
-                    <h3>10 CSS Animation Tricks</h3>
-                    <p>Learn the best CSS animation techniques to make your websites stand out...</p>
-                    <a href="#" class="cta-btn cta-primary" style="margin-top: 15px;">Read More</a>
-                </div>
-            </div>
-            <div class="blog-card">
-                <div class="blog-content">
-                    <div class="date">Dec 1, 2025</div>
-                    <h3>JavaScript Animation Libraries</h3>
-                    <p>Explore the top JavaScript libraries for creating stunning animations...</p>
-                    <a href="#" class="cta-btn cta-primary" style="margin-top: 15px;">Read More</a>
-                </div>
-            </div>
-            <div class="blog-card">
-                <div class="blog-content">
-                    <div class="date">Nov 30, 2025</div>
-                    <h3>Web Design Trends 2025</h3>
-                    <p>Stay ahead with the latest web design trends and best practices...</p>
-                    <a href="#" class="cta-btn cta-primary" style="margin-top: 15px;">Read More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Affiliate Products Section -->
+    <!-- Button Animations -->
     <section class="section scroll-reveal">
-        <h2>🛍️ Recommended Tools</h2>
-        <div class="affiliate-grid">
-            <div class="affiliate-card">
-                <h3>💻 Laptop Deals</h3>
-                <p>Best laptops for web development</p>
-                <a href="https://amzn.to/YOUR-AFFILIATE-LINK" target="_blank" class="affiliate-btn">Shop Now on Amazon</a>
-            </div>
-            <div class="affiliate-card">
-                <h3>📚 Web Dev Books</h3>
-                <p>Top-rated programming books</p>
-                <a href="https://amzn.to/YOUR-AFFILIATE-LINK" target="_blank" class="affiliate-btn">Shop Now on Amazon</a>
-            </div>
-            <div class="affiliate-card">
-                <h3>🎧 Headphones</h3>
-                <p>Best headphones for developers</p>
-                <a href="https://amzn.to/YOUR-AFFILIATE-LINK" target="_blank" class="affiliate-btn">Shop Now on Amazon</a>
-            </div>
-            <div class="affiliate-card">
-                <h3>⌨️ Keyboards</h3>
-                <p>Mechanical keyboards for coding</p>
-                <a href="https://amzn.to/YOUR-AFFILIATE-LINK" target="_blank" class="affiliate-btn">Shop Now on Amazon</a>
-            </div>
+        <h2>🎯 Animated Buttons</h2>
+        <p style="margin-bottom: 30px; font-size: 1.2rem;">Click and interact with these amazing button effects!</p>
+        <div class="button-section">
+            <button class="animated-btn btn-pulse">Pulse Effect</button>
+            <button class="animated-btn btn-glow">Glow Effect</button>
+            <button class="animated-btn btn-wave">Wave Effect</button>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <div class="newsletter scroll-reveal">
-        <h3>📧 Subscribe to My Newsletter</h3>
-        <p>Get weekly web development tips, tutorials, and exclusive content!</p>
-        <form class="newsletter-form" action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
-            <input type="email" name="email" placeholder="Enter your email" required>
-            <button type="submit">Subscribe</button>
-        </form>
-    </div>
-
-    <!-- Contact Form -->
-    <section class="section scroll-reveal" id="contact">
-        <h2>📬 Get in Touch</h2>
-        <form class="contact-form" action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
-            <div class="form-group">
-                <label>Name</label>
-                <input type="text" name="name" required>
-            </div>
-            <div class="form-group">
-                <label>Email</label>
-                <input type="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label>Project Budget</label>
-                <input type="text" name="budget" placeholder="e.g., ₹10,000 - ₹50,000">
-            </div>
-            <div class="form-group">
-                <label>Message</label>
-                <textarea name="message" required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
+    <!-- Text Animations -->
+    <section class="section scroll-reveal">
+        <h2>📝 Text Animations</h2>
+        <div class="text-animations">
+            <div class="typing-text">This text is typing automatically...</div>
+            <div class="glitch-text">GLITCH EFFECT</div>
+        </div>
     </section>
 
-    <!-- Donation Section -->
-    <div class="donation-section scroll-reveal">
-        <h3>☕ Support My Work</h3>
-        <p>If you like my content and want to support me, buy me a coffee!</p>
-        <a href="https://www.buymeacoffee.com/YOUR-USERNAME" target="_blank" class="donation-btn">Buy Me a Coffee</a>
+    <!-- Ad Space 3 -->
+    <div class="ad-container">
+        <div class="ad-placeholder">
+            📢 Advertisement Space - Add your Google AdSense code here
+        </div>
     </div>
 
-    <!-- Social Media Links -->
-    <div class="social-links scroll-reveal">
-        <a href="https://github.com/vashujoshi1-cmd" target="_blank" class="social-btn">G</a>
-        <a href="https://twitter.com/YOUR-HANDLE" target="_blank" class="social-btn">T</a>
-        <a href="https://linkedin.com/in/YOUR-PROFILE" target="_blank" class="social-btn">L</a>
-        <a href="https://instagram.com/YOUR-HANDLE" target="_blank" class="social-btn">I</a>
-    </div>
+    <!-- Floating Shapes -->
+    <section class="section scroll-reveal">
+        <h2>🔷 Floating Shapes</h2>
+        <p style="margin-bottom: 30px; font-size: 1.2rem;">Watch these geometric shapes rotate and float!</p>
+        <div class="shapes-container">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section scroll-reveal">
+        <h2>🚀 Want More Amazing Animations?</h2>
+        <p>Share this page with your friends and explore more creative web designs!</p>
+        <button class="cta-btn" onclick="shareWebsite()">Share Now</button>
+    </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Vashu's Portfolio. All rights reserved.</p>
-        <p>Made with ❤️ and lots of animations</p>
+        <p>© 2024 Vashu's Animation Showcase | Made with ❤️ and CSS</p>
+        <p style="margin-top: 10px;">Follow for more amazing web animations and effects!</p>
     </footer>
 
     <script>
@@ -802,19 +550,23 @@
             });
         });
 
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+        // Share function
+        function shareWebsite() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Vashu\'s Animation Showcase',
+                    text: 'Check out these amazing web animations!',
+                    url: window.location.href
+                }).catch(err => console.log('Error sharing:', err));
+            } else {
+                // Fallback - copy to clipboard
+                navigator.clipboard.writeText(window.location.href);
+                alert('Link copied to clipboard! Share it with your friends! 🚀');
+            }
+        }
+
+        // Track page views (you can integrate with Google Analytics)
+        console.log('Page loaded at:', new Date().toISOString());
     </script>
 </body>
 </html>
