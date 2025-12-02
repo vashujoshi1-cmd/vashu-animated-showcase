@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 7 JavaScript Animation Libraries in 2025 - Vashu's Blog</title>
+    <meta name="description" content="Discover the best JavaScript animation libraries for creating stunning web animations. Compare GSAP, Anime.js, Framer Motion, and more.">
+    <meta name="keywords" content="JavaScript animations, GSAP, Anime.js, Framer Motion, web animation libraries">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            line-height: 1.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav a {
+            color: #4ecdc4;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff6b6b;
+        }
+
+        .article-header {
+            max-width: 900px;
+            margin: 120px auto 50px;
+            padding: 0 40px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+
+        .meta {
+            color: #888;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+
+        .meta span {
+            margin-right: 20px;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto 50px;
+            padding: 40px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #4ecdc4;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #f7b731;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #ccc;
+            font-size: 1.1rem;
+        }
+
+        code {
+            background: rgba(255,255,255,0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #f7b731;
+            font-family: 'Courier New', monospace;
+        }
+
+        pre {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+
+        .library-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .library-card h3 {
+            color: #fff;
+            margin-top: 0;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .pros, .cons {
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .pros h4 {
+            color: #4ecdc4;
+            margin-bottom: 10px;
+        }
+
+        .cons h4 {
+            color: #ff6b6b;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .article-header, .content {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Vashu's Portfolio</div>
+        <a href="../index.html">← Back to Home</a>
+    </nav>
+
+    <div class="article-header">
+        <h1>Top 7 JavaScript Animation Libraries in 2025</h1>
+        <div class="meta">
+            <span>📅 December 1, 2025</span>
+            <span>👤 By Vashu</span>
+            <span>⏱️ 10 min read</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <p>JavaScript animation libraries have become essential tools for modern web developers. While CSS animations are great for simple effects, JavaScript libraries offer more control, complex sequencing, and advanced features that CSS alone can't provide.</p>
+
+        <p>In this comprehensive guide, I'll walk you through the top 7 JavaScript animation libraries in 2025, their strengths, use cases, and help you choose the right one for your project.</p>
+
+        <h2>Why Use JavaScript Animation Libraries?</h2>
+        <p>Before diving into specific libraries, let's understand why you might choose JavaScript over pure CSS:</p>
+        <ul>
+            <li><strong>Complex Sequencing:</strong> Chain multiple animations with precise timing control</li>
+            <li><strong>Dynamic Values:</strong> Animate to values calculated at runtime</li>
+            <li><strong>Better Control:</strong> Play, pause, reverse, and seek through animations</li>
+            <li><strong>Physics-Based Motion:</strong> Create natural-feeling animations with spring physics</li>
+            <li><strong>SVG Animation:</strong> Animate SVG paths, morphing, and complex shapes</li>
+            <li><strong>Cross-Browser Consistency:</strong> Handle browser quirks automatically</li>
+        </ul>
+
+        <div class="library-card">
+            <h3>1. GSAP (GreenSock Animation Platform)</h3>
+            <p><strong>Best For:</strong> Professional-grade animations, complex timelines, SVG animations</p>
+            <p><strong>Bundle Size:</strong> ~50KB (minified)</p>
+            <p><strong>License:</strong> Free for most uses, paid for commercial projects</p>
+
+            <pre><code>// GSAP Example
+gsap.to(".box", {
+  x: 100,
+  duration: 1,
+  ease: "power2.out"
+});
+
+// Timeline for complex sequences
+const tl = gsap.timeline();
+tl.to(".box1", { x: 100 })
+  .to(".box2", { y: 100 })
+  .to(".box3", { rotation: 360 });</code></pre>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>✅ Pros</h4>
+                    <ul>
+                        <li>Industry standard, battle-tested</li>
+                        <li>Excellent performance</li>
+                        <li>Powerful timeline system</li>
+                        <li>Great documentation</li>
+                        <li>Extensive plugin ecosystem</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>❌ Cons</h4>
+                    <ul>
+                        <li>Larger bundle size</li>
+                        <li>Paid license for some features</li>
+                        <li>Steeper learning curve</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="library-card">
+            <h3>2. Anime.js</h3>
+            <p><strong>Best For:</strong> Lightweight projects, SVG animations, simple to moderate complexity</p>
+            <p><strong>Bundle Size:</strong> ~17KB (minified)</p>
+            <p><strong>License:</strong> MIT (Free)</p>
+
+            <pre><code>// Anime.js Example
+anime({
+  targets: '.box',
+  translateX: 250,
+  rotate: '1turn',
+  duration: 800,
+  easing: 'easeInOutQuad'
+});
+
+// Staggered animations
+anime({
+  targets: '.item',
+  translateY: [-100, 0],
+  opacity: [0, 1],
+  delay: anime.stagger(100)
+});</code></pre>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>✅ Pros</h4>
+                    <ul>
+                        <li>Lightweight and fast</li>
+                        <li>Simple, intuitive API</li>
+                        <li>Great for SVG animations</li>
+                        <li>Built-in stagger effects</li>
+                        <li>Completely free</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>❌ Cons</h4>
+                    <ul>
+                        <li>Less powerful than GSAP</li>
+                        <li>Smaller community</li>
+                        <li>Fewer plugins</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="library-card">
+            <h3>3. Framer Motion</h3>
+            <p><strong>Best For:</strong> React applications, gesture-based animations, page transitions</p>
+            <p><strong>Bundle Size:</strong> ~35KB (minified)</p>
+            <p><strong>License:</strong> MIT (Free)</p>
+
+            <pre><code>// Framer Motion Example (React)
+import { motion } from 'framer-motion';
+
+function Component() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+    >
+      Animated Box
+    </motion.div>
+  );
+}</code></pre>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>✅ Pros</h4>
+                    <ul>
+                        <li>Perfect React integration</li>
+                        <li>Declarative API</li>
+                        <li>Built-in gesture support</li>
+                        <li>Layout animations</li>
+                        <li>Excellent TypeScript support</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>❌ Cons</h4>
+                    <ul>
+                        <li>React-only</li>
+                        <li>Larger bundle size</li>
+                        <li>Can impact performance with many elements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="library-card">
+            <h3>4. Three.js</h3>
+            <p><strong>Best For:</strong> 3D animations, WebGL, immersive experiences</p>
+            <p><strong>Bundle Size:</strong> ~600KB (full), can be tree-shaken</p>
+            <p><strong>License:</strong> MIT (Free)</p>
+
+            <pre><code>// Three.js Example
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight);
+const renderer = new THREE.WebGLRenderer();
+
+const geometry = new THREE.BoxGeometry();
+const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const cube = new THREE.Mesh(geometry, material);
+scene.add(cube);
+
+function animate() {
+  requestAnimationFrame(animate);
+  cube.rotation.x += 0.01;
+  cube.rotation.y += 0.01;
+  renderer.render(scene, camera);
+}</code></pre>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>✅ Pros</h4>
+                    <ul>
+                        <li>Full 3D capabilities</li>
+                        <li>Massive community</li>
+                        <li>Extensive examples</li>
+                        <li>VR/AR support</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>❌ Cons</h4>
+                    <ul>
+                        <li>Very large bundle</li>
+                        <li>Steep learning curve</li>
+                        <li>Overkill for 2D animations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="library-card">
+            <h3>5. Lottie</h3>
+            <p><strong>Best For:</strong> After Effects animations, complex illustrations, micro-interactions</p>
+            <p><strong>Bundle Size:</strong> ~30KB (web player)</p>
+            <p><strong>License:</strong> MIT (Free)</p>
+
+            <pre><code>// Lottie Example
+import lottie from 'lottie-web';
+
+const animation = lottie.loadAnimation({
+  container: document.getElementById('lottie-container'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'animation.json'
+});
+
+// Control playback
+animation.play();
+animation.pause();
+animation.setSpeed(0.5);</code></pre>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>✅ Pros</h4>
+                    <ul>
+                        <li>Designer-friendly workflow</li>
+                        <li>Complex animations made easy</li>
+                        <li>Cross-platform (web, iOS, Android)</li>
+                        <li>Scalable vector animations</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>❌ Cons</h4>
+                    <ul>
+                        <li>Requires After Effects for creation</li>
+                        <li>Large JSON files for complex animations</li>
+                        <li>Limited runtime customization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="library-card">
+            <h3>6. Popmotion</h3>
+            <p><strong>Best For:</strong> Physics-based animations, spring animations, functional programming</p>
+            <p><strong>Bundle Size:</strong> ~12KB (minified)</p>
+            <p><strong>License:</strong> MIT (Free)</p>
+
+            <pre><code>// Popmotion Example
+import { animate, spring } from 'popmotion';
+
+// Spring animation
+animate({
+  from: 0,
+  to: 100,
+  type: 'spring',
+  stiffness: 100,
+  damping: 10,
+  onUpdate: (v) => {
+    element.style.transform = `translateX(${v}px)`;
+  }
+});
+
+// Inertia (momentum scrolling)
+import { inertia } from 'popmotion';
+inertia({
+  from: 0,
+  velocity: 1000,
+  onUpdate: (v) => console.log(v)
+});</code></pre>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>✅ Pros</h4>
+                    <ul>
+                        <li>Tiny bundle size</li>
+                        <li>Natural physics-based motion</li>
+                        <li>Functional, composable API</li>
+                        <li>Great for gestures</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>❌ Cons</h4>
+                    <ul>
+                        <li>Less intuitive for beginners</li>
+                        <li>Smaller ecosystem</li>
+                        <li>Limited documentation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="library-card">
+            <h3>7. Motion One</h3>
+            <p><strong>Best For:</strong> Modern browsers, performance-critical animations, small bundle size</p>
+            <p><strong>Bundle Size:</strong> ~3.8KB (minified)</p>
+            <p><strong>License:</strong> MIT (Free)</p>
+
+            <pre><code>// Motion One Example
+import { animate } from 'motion';
+
+// Simple animation
+animate('.box', { x: 100 }, { duration: 1 });
+
+// Timeline
+import { timeline } from 'motion';
+timeline([
+  ['.box1', { x: 100 }],
+  ['.box2', { y: 100 }, { at: '<' }],
+  ['.box3', { scale: 2 }]
+]);
+
+// Spring animations
+animate('.box', { x: 100 }, { type: 'spring' });</code></pre>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>✅ Pros</h4>
+                    <ul>
+                        <li>Smallest bundle size</li>
+                        <li>Uses Web Animations API</li>
+                        <li>Excellent performance</li>
+                        <li>Modern, clean API</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>❌ Cons</h4>
+                    <ul>
+                        <li>Newer library, smaller community</li>
+                        <li>Limited browser support (modern only)</li>
+                        <li>Fewer features than GSAP</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h2>How to Choose the Right Library</h2>
+        <p>Here's a quick decision guide based on your needs:</p>
+
+        <ul>
+            <li><strong>Need professional-grade features?</strong> → GSAP</li>
+            <li><strong>Want something lightweight and free?</strong> → Anime.js or Motion One</li>
+            <li><strong>Building a React app?</strong> → Framer Motion</li>
+            <li><strong>Need 3D animations?</strong> → Three.js</li>
+            <li><strong>Working with designers?</strong> → Lottie</li>
+            <li><strong>Want physics-based motion?</strong> → Popmotion or Framer Motion</li>
+            <li><strong>Need the smallest bundle?</strong> → Motion One</li>
+        </ul>
+
+        <h2>Performance Considerations</h2>
+        <p>Regardless of which library you choose, keep these performance tips in mind:</p>
+
+        <ol>
+            <li><strong>Animate transform and opacity:</strong> These properties are GPU-accelerated</li>
+            <li><strong>Use will-change sparingly:</strong> Only for elements that will definitely animate</li>
+            <li><strong>Debounce scroll animations:</strong> Don't animate on every scroll event</li>
+            <li><strong>Clean up animations:</strong> Remove event listeners and kill animations when components unmount</li>
+            <li><strong>Test on real devices:</strong> Mobile performance can differ significantly from desktop</li>
+        </ol>
+
+        <h2>Conclusion</h2>
+        <p>Each of these libraries has its strengths and ideal use cases. For most projects, I recommend starting with Anime.js or Motion One for their simplicity and small bundle size. If you need more power and don't mind the larger bundle, GSAP is the industry standard for a reason.</p>
+
+        <p>For React projects, Framer Motion provides the best developer experience with its declarative API. And if you're working with designers who use After Effects, Lottie is unbeatable for bringing complex animations to the web.</p>
+
+        <p>The key is to choose based on your specific needs, team skills, and project requirements. Don't be afraid to experiment with different libraries to find what works best for you!</p>
+    </div>
+</body>
+</html>
