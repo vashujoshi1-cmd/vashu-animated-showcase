@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 CSS Animation Tricks Every Developer Should Know - Vashu's Blog</title>
+    <meta name="description" content="Master CSS animations with these 10 essential tricks. Learn keyframes, transitions, transforms, and advanced animation techniques.">
+    <meta name="keywords" content="CSS animations, web development, keyframes, transitions, CSS tricks">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            line-height: 1.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav a {
+            color: #4ecdc4;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff6b6b;
+        }
+
+        .article-header {
+            max-width: 900px;
+            margin: 120px auto 50px;
+            padding: 0 40px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+
+        .meta {
+            color: #888;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+
+        .meta span {
+            margin-right: 20px;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto 50px;
+            padding: 0 40px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #4ecdc4;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #ccc;
+            font-size: 1.1rem;
+        }
+
+        code {
+            background: rgba(255,255,255,0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #f7b731;
+            font-family: 'Courier New', monospace;
+        }
+
+        pre {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+
+        .tip {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .tip strong {
+            color: #f7b731;
+        }
+
+        @media (max-width: 768px) {
+            .article-header, .content {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Vashu's Portfolio</div>
+        <a href="../index.html">← Back to Home</a>
+    </nav>
+
+    <div class="article-header">
+        <h1>10 CSS Animation Tricks Every Developer Should Know</h1>
+        <div class="meta">
+            <span>📅 December 2, 2025</span>
+            <span>👤 By Vashu</span>
+            <span>⏱️ 8 min read</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <p>CSS animations have revolutionized web design, allowing developers to create stunning visual effects without relying on JavaScript. In this comprehensive guide, I'll share 10 essential CSS animation tricks that will elevate your web development skills and help you create more engaging user experiences.</p>
+
+        <h2>1. Master the Basics: Keyframes</h2>
+        <p>Keyframes are the foundation of CSS animations. They define the start and end states of your animation, along with any intermediate steps.</p>
+        
+        <pre><code>@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.element {
+  animation: slideIn 0.5s ease-out;
+}</code></pre>
+
+        <div class="tip">
+            <strong>Pro Tip:</strong> Use percentage-based keyframes for more control. You can define as many intermediate steps as you need (0%, 25%, 50%, 75%, 100%).
+        </div>
+
+        <h2>2. Animation Timing Functions</h2>
+        <p>Timing functions control the pace of your animation. The right timing function can make the difference between a mechanical animation and one that feels natural and fluid.</p>
+
+        <ul>
+            <li><code>ease</code> - Starts slow, speeds up, then slows down (default)</li>
+            <li><code>ease-in</code> - Starts slow, then speeds up</li>
+            <li><code>ease-out</code> - Starts fast, then slows down</li>
+            <li><code>ease-in-out</code> - Slow start and end, fast middle</li>
+            <li><code>linear</code> - Constant speed throughout</li>
+            <li><code>cubic-bezier()</code> - Custom timing curves</li>
+        </ul>
+
+        <pre><code>.smooth-animation {
+  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1);
+}</code></pre>
+
+        <h2>3. Animation Delay for Staggered Effects</h2>
+        <p>Create beautiful staggered animations by using <code>animation-delay</code>. This is perfect for list items, cards, or any group of elements.</p>
+
+        <pre><code>.card:nth-child(1) { animation-delay: 0s; }
+.card:nth-child(2) { animation-delay: 0.1s; }
+.card:nth-child(3) { animation-delay: 0.2s; }
+.card:nth-child(4) { animation-delay: 0.3s; }</code></pre>
+
+        <h2>4. Infinite Animations with animation-iteration-count</h2>
+        <p>Some animations should loop forever, like loading spinners or pulsing buttons. Use <code>animation-iteration-count: infinite</code> for continuous animations.</p>
+
+        <pre><code>@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.pulse-button {
+  animation: pulse 2s ease-in-out infinite;
+}</code></pre>
+
+        <h2>5. Pausing Animations on Hover</h2>
+        <p>Give users control by pausing animations when they hover over elements. This is especially useful for carousels and rotating content.</p>
+
+        <pre><code>.rotating-element {
+  animation: rotate 10s linear infinite;
+}
+
+.rotating-element:hover {
+  animation-play-state: paused;
+}</code></pre>
+
+        <h2>6. Transform Origin for Better Rotations</h2>
+        <p>The <code>transform-origin</code> property changes the pivot point of transformations. This is crucial for creating natural-looking rotations and scales.</p>
+
+        <pre><code>.card {
+  transform-origin: top left;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: rotate(5deg);
+}</code></pre>
+
+        <h2>7. Multiple Animations on One Element</h2>
+        <p>You can apply multiple animations to a single element by separating them with commas. This allows for complex, layered effects.</p>
+
+        <pre><code>.complex-animation {
+  animation: 
+    fadeIn 1s ease-out,
+    slideUp 1s ease-out,
+    rotate 2s ease-in-out infinite;
+}</code></pre>
+
+        <h2>8. Animation Fill Mode</h2>
+        <p>Control what happens before and after an animation with <code>animation-fill-mode</code>. This prevents elements from "jumping" back to their original state.</p>
+
+        <ul>
+            <li><code>forwards</code> - Keeps the final state after animation ends</li>
+            <li><code>backwards</code> - Applies the first keyframe before animation starts</li>
+            <li><code>both</code> - Applies both forwards and backwards</li>
+        </ul>
+
+        <pre><code>.fade-in-element {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}</code></pre>
+
+        <h2>9. Hardware Acceleration with transform and opacity</h2>
+        <p>For smoother animations, use <code>transform</code> and <code>opacity</code> instead of properties like <code>left</code>, <code>top</code>, <code>width</code>, or <code>height</code>. These properties trigger GPU acceleration.</p>
+
+        <pre><code>/* ❌ Avoid this */
+.slow {
+  animation: moveLeft 1s;
+}
+@keyframes moveLeft {
+  to { left: 100px; }
+}
+
+/* ✅ Do this instead */
+.fast {
+  animation: moveLeft 1s;
+}
+@keyframes moveLeft {
+  to { transform: translateX(100px); }
+}</code></pre>
+
+        <div class="tip">
+            <strong>Performance Tip:</strong> Stick to animating transform and opacity for 60fps animations. These properties don't trigger layout recalculations.
+        </div>
+
+        <h2>10. CSS Variables for Dynamic Animations</h2>
+        <p>Use CSS custom properties (variables) to create flexible, reusable animations that can be easily customized.</p>
+
+        <pre><code>:root {
+  --animation-duration: 1s;
+  --animation-delay: 0.2s;
+}
+
+.animated-element {
+  animation: fadeIn var(--animation-duration) ease-out var(--animation-delay);
+}
+
+/* Change animation speed for specific elements */
+.fast-animation {
+  --animation-duration: 0.3s;
+}</code></pre>
+
+        <h2>Bonus: Animation Best Practices</h2>
+        <p>Here are some additional tips to keep in mind when working with CSS animations:</p>
+
+        <ol>
+            <li><strong>Keep it subtle:</strong> Animations should enhance, not distract. Aim for 200-500ms for most UI animations.</li>
+            <li><strong>Respect user preferences:</strong> Use <code>prefers-reduced-motion</code> media query to disable animations for users who prefer less motion.</li>
+            <li><strong>Test on real devices:</strong> Animations that work smoothly on your desktop might lag on mobile devices.</li>
+            <li><strong>Use will-change sparingly:</strong> This property hints to the browser about upcoming changes but can consume memory if overused.</li>
+            <li><strong>Combine with JavaScript:</strong> For complex interactions, use JavaScript to add/remove classes that trigger CSS animations.</li>
+        </ol>
+
+        <pre><code>/* Respect user preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}</code></pre>
+
+        <h2>Conclusion</h2>
+        <p>CSS animations are a powerful tool in modern web development. By mastering these 10 tricks, you'll be able to create smooth, performant, and visually appealing animations that enhance user experience without compromising performance.</p>
+
+        <p>Remember, the key to great animations is subtlety and purpose. Every animation should serve a function, whether it's drawing attention to important elements, providing feedback, or simply making your website more enjoyable to use.</p>
+
+        <p>Start experimenting with these techniques in your projects, and don't be afraid to combine them to create unique effects. Happy animating!</p>
+
+        <div class="tip">
+            <strong>Want to learn more?</strong> Check out my other tutorials on JavaScript animations and advanced CSS techniques. Follow me for weekly web development tips!
+        </div>
+    </div>
+</body>
+</html>
