@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Vashu's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            line-height: 1.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav a {
+            color: #4ecdc4;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff6b6b;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 100px auto 50px;
+            padding: 40px;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            color: #f7b731;
+        }
+
+        .content-section {
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #4ecdc4;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #ccc;
+            font-size: 1.1rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .skill-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            color: #f7b731;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #ccc;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 80px 20px 30px;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Vashu's Portfolio</div>
+        <a href="index.html">← Back to Home</a>
+    </nav>
+
+    <div class="container">
+        <div class="hero-section">
+            <h1>About Vashu</h1>
+            <p class="tagline">Web Developer | Animation Specialist | Creative Designer</p>
+        </div>
+
+        <div class="content-section">
+            <h2>👋 Hello, I'm Vashu!</h2>
+            <p>Welcome to my creative space! I'm a passionate web developer and animation specialist based in India, dedicated to crafting beautiful, interactive, and user-friendly websites that leave a lasting impression.</p>
+            <p>With expertise in modern web technologies and a keen eye for design, I transform ideas into stunning digital experiences. My work combines technical excellence with creative innovation to deliver websites that not only look amazing but also perform flawlessly.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>💼 What I Do</h2>
+            <p>I specialize in creating custom websites with cutting-edge animations and interactive elements. Whether you need a portfolio website, business site, or a complete web application, I bring your vision to life with:</p>
+            <ul style="margin-left: 30px; margin-top: 20px;">
+                <li style="margin-bottom: 10px;">🎨 <strong>Custom Web Design:</strong> Unique, responsive designs tailored to your brand</li>
+                <li style="margin-bottom: 10px;">💻 <strong>Front-End Development:</strong> Clean, efficient code using HTML, CSS, JavaScript</li>
+                <li style="margin-bottom: 10px;">✨ <strong>Animation & Interactions:</strong> Engaging CSS and JavaScript animations</li>
+                <li style="margin-bottom: 10px;">🚀 <strong>Performance Optimization:</strong> Fast-loading, SEO-friendly websites</li>
+                <li style="margin-bottom: 10px;">📱 <strong>Responsive Design:</strong> Perfect experience on all devices</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>🛠️ Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>HTML5 & CSS3</h3>
+                    <p>Modern markup & styling</p>
+                </div>
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Interactive functionality</p>
+                </div>
+                <div class="skill-card">
+                    <h3>CSS Animations</h3>
+                    <p>Smooth transitions</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Responsive Design</h3>
+                    <p>Mobile-first approach</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Git & GitHub</h3>
+                    <p>Version control</p>
+                </div>
+                <div class="skill-card">
+                    <h3>SEO Optimization</h3>
+                    <p>Search visibility</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>📊 By The Numbers</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Animations Created</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>🎯 My Approach</h2>
+            <p>I believe in creating websites that are not just visually appealing but also functional and user-centric. My development process focuses on:</p>
+            <ul style="margin-left: 30px; margin-top: 20px;">
+                <li style="margin-bottom: 10px;"><strong>Understanding Your Needs:</strong> Every project starts with listening to your goals</li>
+                <li style="margin-bottom: 10px;"><strong>Creative Solutions:</strong> Innovative designs that stand out from the crowd</li>
+                <li style="margin-bottom: 10px;"><strong>Quality Code:</strong> Clean, maintainable, and scalable development</li>
+                <li style="margin-bottom: 10px;"><strong>Timely Delivery:</strong> Meeting deadlines without compromising quality</li>
+                <li style="margin-bottom: 10px;"><strong>Ongoing Support:</strong> Available for updates and maintenance</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>🌟 Why Choose Me?</h2>
+            <p>When you work with me, you get more than just a website – you get a partner committed to your success. I pride myself on:</p>
+            <ul style="margin-left: 30px; margin-top: 20px;">
+                <li style="margin-bottom: 10px;">✅ Attention to detail and pixel-perfect designs</li>
+                <li style="margin-bottom: 10px;">✅ Clear communication throughout the project</li>
+                <li style="margin-bottom: 10px;">✅ Competitive pricing with transparent quotes</li>
+                <li style="margin-bottom: 10px;">✅ Fast turnaround times</li>
+                <li style="margin-bottom: 10px;">✅ Post-launch support and guidance</li>
+            </ul>
+        </div>
+
+        <div class="content-section" style="text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <h2>Let's Work Together!</h2>
+            <p>Ready to bring your web project to life? I'm always excited to take on new challenges and create something amazing.</p>
+            <a href="index.html#contact" style="display: inline-block; margin-top: 20px; padding: 15px 40px; background: #f7b731; color: white; text-decoration: none; border-radius: 50px; font-size: 1.2rem; transition: all 0.3s;">Get In Touch</a>
+        </div>
+    </div>
+</body>
+</html>
