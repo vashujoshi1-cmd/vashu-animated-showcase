@@ -138,6 +138,8 @@
             gap: 20px;
             opacity: 0;
             animation: fadeIn 1s ease 1s forwards;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .cta-btn {
@@ -198,7 +200,41 @@
             border-radius: 10px;
         }
 
-        /* Services Section */
+        /* Quick Links Section */
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 50px;
+        }
+
+        .quick-link-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+            text-decoration: none;
+            color: white;
+        }
+
+        .quick-link-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .quick-link-card .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .quick-link-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Services Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -270,44 +306,6 @@
             text-decoration: none;
         }
 
-        /* Affiliate Section */
-        .affiliate-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            width: 100%;
-            max-width: 1200px;
-        }
-
-        .affiliate-card {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .affiliate-card:hover {
-            transform: scale(1.05);
-        }
-
-        .affiliate-btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 30px;
-            background: white;
-            color: #f5576c;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-
-        .affiliate-btn:hover {
-            background: #f7b731;
-            color: white;
-        }
-
         /* Contact Form */
         .contact-form {
             width: 100%;
@@ -328,7 +326,8 @@
         }
 
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
             padding: 12px;
             border: 2px solid rgba(78, 205, 196, 0.3);
@@ -406,33 +405,6 @@
             background: #ff6b6b;
         }
 
-        /* Donation Section */
-        .donation-section {
-            text-align: center;
-            padding: 60px 40px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            max-width: 600px;
-            margin: 50px auto;
-        }
-
-        .donation-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 40px;
-            background: #f7b731;
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            transition: all 0.3s;
-        }
-
-        .donation-btn:hover {
-            background: #ff6b6b;
-            transform: scale(1.05);
-        }
-
         /* Social Links */
         .social-links {
             display: flex;
@@ -506,51 +478,6 @@
             color: #888;
         }
 
-        /* 3D Cards Section */
-        .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            width: 100%;
-            max-width: 1200px;
-        }
-
-        .card-3d {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 40px;
-            border-radius: 20px;
-            transform-style: preserve-3d;
-            transition: transform 0.5s ease;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card-3d::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
-            opacity: 0;
-            transition: opacity 0.5s;
-        }
-
-        .card-3d:hover {
-            transform: rotateY(10deg) rotateX(10deg) scale(1.05);
-        }
-
-        .card-3d:hover::before {
-            opacity: 1;
-        }
-
-        .card-3d h3 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
         /* Scroll Animation */
         .scroll-reveal {
             opacity: 0;
@@ -571,6 +498,8 @@
             nav ul { display: none; }
             .section { padding: 80px 20px; }
             .footer-content { grid-template-columns: 1fr; }
+            .hero .cta-buttons { flex-direction: column; width: 100%; padding: 0 20px; }
+            .cta-btn { width: 100%; }
         }
     </style>
 </head>
@@ -580,8 +509,9 @@
         <div class="logo">Vashu's Portfolio</div>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="#blog">Blog</a></li>
+            <li><a href="resources.html">Resources</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -594,14 +524,41 @@
         <h1>✨ Animation Showcase ✨</h1>
         <p>Professional Web Design & Development Services</p>
         <div class="cta-buttons">
-            <a href="#services" class="cta-btn cta-primary">Hire Me</a>
-            <a href="#contact" class="cta-btn cta-secondary">Get in Touch</a>
+            <a href="services.html" class="cta-btn cta-primary">Hire Me</a>
+            <a href="digital-products.html" class="cta-btn cta-secondary">Buy Templates</a>
+            <a href="resources.html" class="cta-btn cta-secondary">Tools & Resources</a>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="section scroll-reveal">
+        <h2>🚀 Explore</h2>
+        <div class="quick-links">
+            <a href="services.html" class="quick-link-card">
+                <div class="icon">💼</div>
+                <h3>Freelance Services</h3>
+                <p>Hire me for your project</p>
+            </a>
+            <a href="digital-products.html" class="quick-link-card">
+                <div class="icon">🎁</div>
+                <h3>Digital Products</h3>
+                <p>Templates & Resources</p>
+            </a>
+            <a href="resources.html" class="quick-link-card">
+                <div class="icon">🛠️</div>
+                <h3>Tools & Gear</h3>
+                <p>My recommendations</p>
+            </a>
+            <a href="#blog" class="quick-link-card">
+                <div class="icon">📝</div>
+                <h3>Blog & Tutorials</h3>
+                <p>Learn web development</p>
+            </a>
         </div>
     </section>
 
     <!-- AdSense Ad Slot 1 -->
     <div class="ad-container">
-        <!-- Replace with your AdSense code -->
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
@@ -613,7 +570,7 @@
         </script>
     </div>
 
-    <!-- Services Section -->
+    <!-- Services Preview -->
     <section class="section scroll-reveal" id="services">
         <h2>💼 My Services</h2>
         <div class="services-grid">
@@ -621,38 +578,19 @@
                 <h3>🎨 Web Design</h3>
                 <p>Beautiful, responsive websites with stunning animations</p>
                 <div class="price">Starting at ₹5,000</div>
-                <a href="#contact" class="cta-btn cta-primary">Order Now</a>
+                <a href="services.html" class="cta-btn cta-primary">View Details</a>
             </div>
             <div class="service-card">
                 <h3>💻 Web Development</h3>
                 <p>Full-stack development with modern technologies</p>
                 <div class="price">Starting at ₹10,000</div>
-                <a href="#contact" class="cta-btn cta-primary">Order Now</a>
+                <a href="services.html" class="cta-btn cta-primary">View Details</a>
             </div>
             <div class="service-card">
                 <h3>🚀 Animation Services</h3>
                 <p>Custom CSS & JavaScript animations for your site</p>
                 <div class="price">Starting at ₹3,000</div>
-                <a href="#contact" class="cta-btn cta-primary">Order Now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3D Cards Demo -->
-    <section class="section scroll-reveal">
-        <h2>🎴 Interactive Animations</h2>
-        <div class="cards-container">
-            <div class="card-3d">
-                <h3>3D Effects</h3>
-                <p>Hover over me to see 3D rotation effect!</p>
-            </div>
-            <div class="card-3d">
-                <h3>Smooth Transitions</h3>
-                <p>Interactive and smooth animations</p>
-            </div>
-            <div class="card-3d">
-                <h3>Modern Design</h3>
-                <p>Beautiful gradient backgrounds</p>
+                <a href="services.html" class="cta-btn cta-primary">View Details</a>
             </div>
         </div>
     </section>
@@ -679,7 +617,7 @@
                     <div class="blog-content">
                         <div class="date">Dec 2, 2025</div>
                         <h3>10 CSS Animation Tricks</h3>
-                        <p>Learn the best CSS animation techniques to make your websites stand out. Master keyframes, timing functions, and advanced tricks...</p>
+                        <p>Learn the best CSS animation techniques to make your websites stand out...</p>
                     </div>
                 </a>
             </div>
@@ -688,7 +626,7 @@
                     <div class="blog-content">
                         <div class="date">Dec 1, 2025</div>
                         <h3>Top JavaScript Animation Libraries</h3>
-                        <p>Explore the top JavaScript libraries for creating stunning animations. Compare GSAP, Anime.js, Framer Motion, and more...</p>
+                        <p>Explore the top JavaScript libraries for creating stunning animations...</p>
                     </div>
                 </a>
             </div>
@@ -697,55 +635,13 @@
                     <div class="blog-content">
                         <div class="date">Nov 30, 2025</div>
                         <h3>Web Design Trends 2025</h3>
-                        <p>Stay ahead with the latest web design trends and best practices. From AI-powered designs to immersive 3D experiences...</p>
-                    </div>
-                </a>
-            </div>
-            <div class="blog-card">
-                <a href="blog/freelancing-tips.html">
-                    <div class="blog-content">
-                        <div class="date">Nov 28, 2025</div>
-                        <h3>Freelancing Tips for Developers</h3>
-                        <p>Master freelance web development with proven tips. Learn how to find clients, set rates, and build a successful career...</p>
-                    </div>
-                </a>
-            </div>
-            <div class="blog-card">
-                <a href="blog/responsive-design-guide.html">
-                    <div class="blog-content">
-                        <div class="date">Nov 27, 2025</div>
-                        <h3>Complete Responsive Design Guide</h3>
-                        <p>Master responsive web design with this comprehensive guide. Learn mobile-first approach, breakpoints, and modern CSS...</p>
+                        <p>Stay ahead with the latest web design trends and best practices...</p>
                     </div>
                 </a>
             </div>
         </div>
-    </section>
-
-    <!-- Affiliate Products Section -->
-    <section class="section scroll-reveal">
-        <h2>🛍️ Recommended Tools</h2>
-        <div class="affiliate-grid">
-            <div class="affiliate-card">
-                <h3>💻 Laptop Deals</h3>
-                <p>Best laptops for web development</p>
-                <a href="https://amzn.to/YOUR-AFFILIATE-LINK" target="_blank" class="affiliate-btn">Shop Now on Amazon</a>
-            </div>
-            <div class="affiliate-card">
-                <h3>📚 Web Dev Books</h3>
-                <p>Top-rated programming books</p>
-                <a href="https://amzn.to/YOUR-AFFILIATE-LINK" target="_blank" class="affiliate-btn">Shop Now on Amazon</a>
-            </div>
-            <div class="affiliate-card">
-                <h3>🎧 Headphones</h3>
-                <p>Best headphones for developers</p>
-                <a href="https://amzn.to/YOUR-AFFILIATE-LINK" target="_blank" class="affiliate-btn">Shop Now on Amazon</a>
-            </div>
-            <div class="affiliate-card">
-                <h3>⌨️ Keyboards</h3>
-                <p>Mechanical keyboards for coding</p>
-                <a href="https://amzn.to/YOUR-AFFILIATE-LINK" target="_blank" class="affiliate-btn">Shop Now on Amazon</a>
-            </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="#blog" class="cta-btn cta-primary">View All Posts</a>
         </div>
     </section>
 
@@ -772,6 +668,16 @@
                 <input type="email" name="email" required>
             </div>
             <div class="form-group">
+                <label>Service Needed</label>
+                <select name="service">
+                    <option value="">Select a service</option>
+                    <option value="web-design">Web Design</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="animation">Animation Services</option>
+                    <option value="consultation">Consultation</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label>Project Budget</label>
                 <input type="text" name="budget" placeholder="e.g., ₹10,000 - ₹50,000">
             </div>
@@ -782,13 +688,6 @@
             <button type="submit" class="submit-btn">Send Message</button>
         </form>
     </section>
-
-    <!-- Donation Section -->
-    <div class="donation-section scroll-reveal">
-        <h3>☕ Support My Work</h3>
-        <p>If you like my content and want to support me, buy me a coffee!</p>
-        <a href="https://www.buymeacoffee.com/YOUR-USERNAME" target="_blank" class="donation-btn">Buy Me a Coffee</a>
-    </div>
 
     <!-- Social Media Links -->
     <div class="social-links scroll-reveal">
@@ -806,13 +705,19 @@
                 <p>Professional web developer specializing in animations and modern web design. Creating stunning digital experiences.</p>
             </div>
             <div class="footer-section">
-                <h4>Quick Links</h4>
+                <h4>Services</h4>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="services.html">Freelance Services</a></li>
+                    <li><a href="digital-products.html">Digital Products</a></li>
+                    <li><a href="resources.html">Tools & Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
                     <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
                     <li><a href="about.html">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -820,13 +725,6 @@
                 <ul>
                     <li><a href="privacy-policy.html">Privacy Policy</a></li>
                     <li><a href="terms.html">Terms & Conditions</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <ul>
-                    <li>Email: vashujoshi1@gmail.com</li>
-                    <li>Location: India</li>
                 </ul>
             </div>
         </div>
@@ -867,27 +765,6 @@
 
         document.querySelectorAll('.scroll-reveal').forEach(el => {
             observer.observe(el);
-        });
-
-        // 3D card mouse tracking
-        document.querySelectorAll('.card-3d').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const rotateX = (y - centerY) / 10;
-                const rotateY = (centerX - x) / 10;
-                
-                card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'rotateX(0) rotateY(0) scale(1)';
-            });
         });
 
         // Smooth scrolling
