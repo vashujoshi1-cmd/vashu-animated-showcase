@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Products - Website Templates & Resources</title>
+    <meta name="description" content="Download premium website templates, code snippets, and animation packs. Instant download, lifetime updates, and commercial license included.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            line-height: 1.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav a {
+            color: #4ecdc4;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .hero {
+            padding: 150px 50px 100px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 50px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .product-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .product-content {
+            padding: 30px;
+        }
+
+        .product-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #4ecdc4;
+        }
+
+        .product-price {
+            font-size: 2.5rem;
+            color: #f7b731;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .product-features {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .product-features li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .product-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4ecdc4;
+        }
+
+        .buy-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            transition: all 0.3s;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        .buy-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #f7b731;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .container { padding: 40px 20px; }
+            .products-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Vashu's Portfolio</div>
+        <a href="index.html">← Back to Home</a>
+    </nav>
+
+    <div class="hero">
+        <h1>🎁 Digital Products</h1>
+        <p>Premium Templates & Resources for Developers</p>
+    </div>
+
+    <div class="container">
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">🎨</div>
+                <div class="product-content">
+                    <span class="badge">BEST SELLER</span>
+                    <h3>Portfolio Template Pack</h3>
+                    <p>5 stunning portfolio templates with animations and responsive design.</p>
+                    <div class="product-price">₹999</div>
+                    <ul class="product-features">
+                        <li>5 Unique Designs</li>
+                        <li>Fully Responsive</li>
+                        <li>CSS Animations Included</li>
+                        <li>Easy to Customize</li>
+                        <li>Commercial License</li>
+                        <li>Lifetime Updates</li>
+                        <li>Documentation Included</li>
+                    </ul>
+                    <a href="https://gumroad.com/YOUR-PRODUCT" target="_blank" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">✨</div>
+                <div class="product-content">
+                    <span class="badge">NEW</span>
+                    <h3>Animation Library</h3>
+                    <p>100+ ready-to-use CSS animations and effects.</p>
+                    <div class="product-price">₹799</div>
+                    <ul class="product-features">
+                        <li>100+ Animations</li>
+                        <li>Copy-Paste Ready</li>
+                        <li>Performance Optimized</li>
+                        <li>Cross-browser Compatible</li>
+                        <li>Video Tutorials</li>
+                        <li>Free Updates</li>
+                    </ul>
+                    <a href="https://gumroad.com/YOUR-PRODUCT" target="_blank" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🚀</div>
+                <div class="product-content">
+                    <h3>Landing Page Bundle</h3>
+                    <p>10 high-converting landing page templates.</p>
+                    <div class="product-price">₹1,499</div>
+                    <ul class="product-features">
+                        <li>10 Landing Pages</li>
+                        <li>Mobile Optimized</li>
+                        <li>Contact Forms</li>
+                        <li>SEO Ready</li>
+                        <li>Fast Loading</li>
+                        <li>Easy Customization</li>
+                    </ul>
+                    <a href="https://gumroad.com/YOUR-PRODUCT" target="_blank" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">💼</div>
+                <div class="product-content">
+                    <h3>Business Website Kit</h3>
+                    <p>Complete business website template with admin panel.</p>
+                    <div class="product-price">₹2,499</div>
+                    <ul class="product-features">
+                        <li>15+ Pages</li>
+                        <li>Admin Dashboard</li>
+                        <li>Blog System</li>
+                        <li>Contact Management</li>
+                        <li>Analytics Integration</li>
+                        <li>Premium Support</li>
+                    </ul>
+                    <a href="https://gumroad.com/YOUR-PRODUCT" target="_blank" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">📱</div>
+                <div class="product-content">
+                    <span class="badge">POPULAR</span>
+                    <h3>Responsive Components</h3>
+                    <p>50+ reusable UI components for modern websites.</p>
+                    <div class="product-price">₹699</div>
+                    <ul class="product-features">
+                        <li>50+ Components</li>
+                        <li>Navigation Menus</li>
+                        <li>Cards & Buttons</li>
+                        <li>Forms & Inputs</li>
+                        <li>Modals & Popups</li>
+                        <li>Code Examples</li>
+                    </ul>
+                    <a href="https://gumroad.com/YOUR-PRODUCT" target="_blank" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🎓</div>
+                <div class="product-content">
+                    <h3>Web Dev Cheat Sheets</h3>
+                    <p>Complete reference guide for HTML, CSS, and JavaScript.</p>
+                    <div class="product-price">₹299</div>
+                    <ul class="product-features">
+                        <li>HTML5 Cheat Sheet</li>
+                        <li>CSS3 Reference</li>
+                        <li>JavaScript Guide</li>
+                        <li>Responsive Design Tips</li>
+                        <li>SEO Checklist</li>
+                        <li>Printable PDFs</li>
+                    </ul>
+                    <a href="https://gumroad.com/YOUR-PRODUCT" target="_blank" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🛒</div>
+                <div class="product-content">
+                    <span class="badge">PREMIUM</span>
+                    <h3>E-Commerce Template</h3>
+                    <p>Full-featured online store template with cart system.</p>
+                    <div class="product-price">₹3,999</div>
+                    <ul class="product-features">
+                        <li>Product Pages</li>
+                        <li>Shopping Cart</li>
+                        <li>Checkout System</li>
+                        <li>User Accounts</li>
+                        <li>Admin Panel</li>
+                        <li>Payment Ready</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <a href="https://gumroad.com/YOUR-PRODUCT" target="_blank" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🎬</div>
+                <div class="product-content">
+                    <h3>Video Course: Web Animations</h3>
+                    <p>Learn to create stunning animations from scratch.</p>
+                    <div class="product-price">₹1,999</div>
+                    <ul class="product-features">
+                        <li>5+ Hours Video</li>
+                        <li>20+ Projects</li>
+                        <li>Source Code Included</li>
+                        <li>Certificate</li>
+                        <li>Lifetime Access</li>
+                        <li>Q&A Support</li>
+                    </ul>
+                    <a href="https://gumroad.com/YOUR-PRODUCT" target="_blank" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">📚</div>
+                <div class="product-content">
+                    <h3>Complete Bundle</h3>
+                    <p>Get ALL products at 50% discount!</p>
+                    <div class="product-price">₹6,999 <span style="text-decoration: line-through; font-size: 1.5rem; color: #888;">₹13,998</span></div>
+                    <ul class="product-features">
+                        <li>All Templates</li>
+                        <li>All Components</li>
+                        <li>All Courses</li>
+                        <li>All Resources</li>
+                        <li>Priority Support</li>
+                        <li>Lifetime Updates</li>
+                        <li>Commercial License</li>
+                    </ul>
+                    <a href="https://gumroad.com/YOUR-PRODUCT" target="_blank" class="buy-btn">Buy Complete Bundle</a>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 80px; text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 60px 40px; border-radius: 20px;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">💎 Why Choose My Products?</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px;">
+                <div>
+                    <div style="font-size: 3rem; margin-bottom: 15px;">⚡</div>
+                    <h3>Instant Download</h3>
+                    <p>Get immediate access after purchase</p>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; margin-bottom: 15px;">🔄</div>
+                    <h3>Lifetime Updates</h3>
+                    <p>Free updates forever</p>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; margin-bottom: 15px;">💼</div>
+                    <h3>Commercial License</h3>
+                    <p>Use in client projects</p>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; margin-bottom: 15px;">🎯</div>
+                    <h3>Premium Support</h3>
+                    <p>Email support included</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
