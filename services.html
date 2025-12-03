@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Web Development Services - Hire Vashu</title>
+    <meta name="description" content="Professional web design and development services. Custom websites, animations, e-commerce solutions, and more. Get a free quote today!">
+    <meta name="keywords" content="web development services, hire web developer, freelance web designer, custom website, e-commerce development">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            line-height: 1.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav a {
+            color: #4ecdc4;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff6b6b;
+        }
+
+        .hero {
+            padding: 150px 50px 100px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #f7b731;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #ff6b6b;
+            transform: scale(1.05);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 50px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #4ecdc4;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .service-card {
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: #4ecdc4;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(78, 205, 196, 0.3);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #4ecdc4;
+        }
+
+        .service-card .price {
+            font-size: 2rem;
+            color: #f7b731;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .service-card ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .service-card ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .service-card ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4ecdc4;
+            font-weight: bold;
+        }
+
+        .service-card .order-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+
+        .service-card .order-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .packages-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 50px;
+            border-radius: 20px;
+            margin: 80px 0;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .package-card {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .package-card.featured {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.05);
+            border: 3px solid #f7b731;
+        }
+
+        .package-card h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .package-price {
+            font-size: 3rem;
+            color: #f7b731;
+            margin: 20px 0;
+        }
+
+        .package-card ul {
+            list-style: none;
+            text-align: left;
+            margin: 30px 0;
+        }
+
+        .package-card ul li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .package-card ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4ecdc4;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .testimonials {
+            margin: 80px 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid #4ecdc4;
+        }
+
+        .testimonial-card .stars {
+            color: #f7b731;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card .client-name {
+            color: #4ecdc4;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .process-section {
+            margin: 80px 0;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .faq-section {
+            margin: 80px 0;
+        }
+
+        .faq-item {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .faq-question {
+            font-size: 1.3rem;
+            color: #4ecdc4;
+            margin-bottom: 10px;
+        }
+
+        .faq-answer {
+            color: #ccc;
+            line-height: 1.8;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+            padding: 80px 50px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 80px 0;
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .container { padding: 40px 20px; }
+            .services-grid { grid-template-columns: 1fr; }
+            nav { padding: 15px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Vashu's Portfolio</div>
+        <a href="index.html">← Back to Home</a>
+    </nav>
+
+    <div class="hero">
+        <h1>🚀 Professional Web Development Services</h1>
+        <p>Transform Your Ideas Into Stunning Websites</p>
+        <a href="#contact" class="cta-btn">Get Free Quote</a>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">💼 My Services</h2>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>Landing Page Design</h3>
+                <div class="price">₹5,000 - ₹15,000</div>
+                <p>High-converting landing pages with stunning animations and responsive design.</p>
+                <ul>
+                    <li>Responsive Design</li>
+                    <li>Custom Animations</li>
+                    <li>SEO Optimized</li>
+                    <li>Fast Loading</li>
+                    <li>Contact Form Integration</li>
+                    <li>3 Revisions Included</li>
+                </ul>
+                <a href="#contact" class="order-btn">Order Now</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3>Business Website</h3>
+                <div class="price">₹15,000 - ₹40,000</div>
+                <p>Complete business website with multiple pages and advanced features.</p>
+                <ul>
+                    <li>5-10 Pages</li>
+                    <li>Custom Design</li>
+                    <li>Blog Integration</li>
+                    <li>Contact Forms</li>
+                    <li>Google Maps</li>
+                    <li>Social Media Integration</li>
+                    <li>Admin Panel</li>
+                    <li>5 Revisions</li>
+                </ul>
+                <a href="#contact" class="order-btn">Order Now</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🛒</div>
+                <h3>E-Commerce Website</h3>
+                <div class="price">₹40,000 - ₹1,00,000</div>
+                <p>Full-featured online store with payment gateway integration.</p>
+                <ul>
+                    <li>Product Management</li>
+                    <li>Shopping Cart</li>
+                    <li>Payment Gateway</li>
+                    <li>Order Management</li>
+                    <li>Customer Accounts</li>
+                    <li>Inventory System</li>
+                    <li>Email Notifications</li>
+                    <li>Unlimited Revisions</li>
+                </ul>
+                <a href="#contact" class="order-btn">Order Now</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h3>Animation Services</h3>
+                <div class="price">₹3,000 - ₹10,000</div>
+                <p>Custom CSS and JavaScript animations for your existing website.</p>
+                <ul>
+                    <li>Scroll Animations</li>
+                    <li>Hover Effects</li>
+                    <li>Loading Animations</li>
+                    <li>Micro-interactions</li>
+                    <li>3D Effects</li>
+                    <li>Performance Optimized</li>
+                </ul>
+                <a href="#contact" class="order-btn">Order Now</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>Website Maintenance</h3>
+                <div class="price">₹2,000/month</div>
+                <p>Keep your website updated, secure, and running smoothly.</p>
+                <ul>
+                    <li>Regular Updates</li>
+                    <li>Bug Fixes</li>
+                    <li>Security Monitoring</li>
+                    <li>Backup Management</li>
+                    <li>Performance Optimization</li>
+                    <li>Content Updates</li>
+                    <li>24/7 Support</li>
+                </ul>
+                <a href="#contact" class="order-btn">Order Now</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Responsive Redesign</h3>
+                <div class="price">₹8,000 - ₹25,000</div>
+                <p>Make your existing website mobile-friendly and modern.</p>
+                <ul>
+                    <li>Mobile Optimization</li>
+                    <li>Modern Design</li>
+                    <li>Speed Optimization</li>
+                    <li>Cross-browser Testing</li>
+                    <li>SEO Improvements</li>
+                    <li>Analytics Setup</li>
+                </ul>
+                <a href="#contact" class="order-btn">Order Now</a>
+            </div>
+        </div>
+
+        <div class="packages-section">
+            <h2 class="section-title" style="color: white;">🎁 Special Packages</h2>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <h3>Starter</h3>
+                    <div class="package-price">₹10,000</div>
+                    <p>Perfect for small businesses</p>
+                    <ul>
+                        <li>3-5 Pages</li>
+                        <li>Responsive Design</li>
+                        <li>Contact Form</li>
+                        <li>Basic SEO</li>
+                        <li>1 Month Support</li>
+                        <li>2 Revisions</li>
+                    </ul>
+                    <a href="#contact" class="cta-btn">Choose Plan</a>
+                </div>
+
+                <div class="package-card featured">
+                    <h3>Professional</h3>
+                    <div class="package-price">₹25,000</div>
+                    <p>Most Popular Choice</p>
+                    <ul>
+                        <li>8-10 Pages</li>
+                        <li>Custom Design</li>
+                        <li>Blog Integration</li>
+                        <li>Advanced SEO</li>
+                        <li>3 Months Support</li>
+                        <li>5 Revisions</li>
+                        <li>Google Analytics</li>
+                        <li>Social Media Setup</li>
+                    </ul>
+                    <a href="#contact" class="cta-btn">Choose Plan</a>
+                </div>
+
+                <div class="package-card">
+                    <h3>Enterprise</h3>
+                    <div class="package-price">₹50,000+</div>
+                    <p>For large businesses</p>
+                    <ul>
+                        <li>Unlimited Pages</li>
+                        <li>Custom Features</li>
+                        <li>E-commerce Ready</li>
+                        <li>Premium SEO</li>
+                        <li>6 Months Support</li>
+                        <li>Unlimited Revisions</li>
+                        <li>Priority Support</li>
+                        <li>Training Included</li>
+                    </ul>
+                    <a href="#contact" class="cta-btn">Choose Plan</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="process-section">
+            <h2 class="section-title">🔄 How It Works</h2>
+            <div class="process-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Consultation</h3>
+                    <p>We discuss your requirements, goals, and vision for the project.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Planning</h3>
+                    <p>I create a detailed plan, timeline, and quote for your approval.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Design</h3>
+                    <p>I design mockups and prototypes for your review and feedback.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Development</h3>
+                    <p>I build your website with clean code and best practices.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <h3>Testing</h3>
+                    <p>Thorough testing across devices and browsers for quality.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">6</div>
+                    <h3>Launch</h3>
+                    <p>Your website goes live with full support and documentation.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonials">
+            <h2 class="section-title">⭐ Client Testimonials</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Excellent work! The website looks amazing and loads super fast. Highly recommended for anyone looking for quality web development."</p>
+                    <div class="client-name">- Rahul Sharma, Business Owner</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Very professional and responsive. Delivered the project on time with all the features I requested. Will definitely work again!"</p>
+                    <div class="client-name">- Priya Patel, Startup Founder</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The animations on my website are incredible! My visitors love the interactive design. Worth every rupee!"</p>
+                    <div class="client-name">- Amit Kumar, Freelancer</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="section-title">❓ Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How long does it take to build a website?</div>
+                <div class="faq-answer">Typically 1-4 weeks depending on complexity. Landing pages take 3-7 days, while e-commerce sites may take 4-8 weeks.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do you provide hosting and domain?</div>
+                <div class="faq-answer">I can help you set up hosting and domain, or work with your existing provider. I'll guide you through the entire process.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What if I need changes after launch?</div>
+                <div class="faq-answer">All packages include post-launch support. Additional changes can be made at affordable hourly rates or through maintenance packages.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do you offer payment plans?</div>
+                <div class="faq-answer">Yes! I accept 50% upfront and 50% on completion. For larger projects, we can arrange milestone-based payments.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Will my website be mobile-friendly?</div>
+                <div class="faq-answer">Absolutely! All websites are fully responsive and optimized for mobile, tablet, and desktop devices.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can you help with SEO?</div>
+                <div class="faq-answer">Yes! All websites include basic SEO optimization. Advanced SEO services are available as add-ons.</div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's create something amazing together!</p>
+            <a href="#contact" class="cta-btn" style="background: white; color: #667eea;">Get Free Consultation</a>
+        </div>
+
+        <div id="contact" style="margin-top: 80px;">
+            <h2 class="section-title">📬 Contact Me</h2>
+            <div style="max-width: 600px; margin: 0 auto; background: rgba(255,255,255,0.05); padding: 40px; border-radius: 20px;">
+                <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 8px; color: #4ecdc4;">Name</label>
+                        <input type="text" name="name" required style="width: 100%; padding: 12px; border: 2px solid rgba(78, 205, 196, 0.3); background: rgba(255,255,255,0.05); color: white; border-radius: 8px; font-size: 1rem;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 8px; color: #4ecdc4;">Email</label>
+                        <input type="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid rgba(78, 205, 196, 0.3); background: rgba(255,255,255,0.05); color: white; border-radius: 8px; font-size: 1rem;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 8px; color: #4ecdc4;">Service Needed</label>
+                        <select name="service" required style="width: 100%; padding: 12px; border: 2px solid rgba(78, 205, 196, 0.3); background: rgba(255,255,255,0.05); color: white; border-radius: 8px; font-size: 1rem;">
+                            <option value="">Select a service</option>
+                            <option value="landing-page">Landing Page</option>
+                            <option value="business-website">Business Website</option>
+                            <option value="ecommerce">E-Commerce</option>
+                            <option value="animation">Animation Services</option>
+                            <option value="maintenance">Website Maintenance</option>
+                            <option value="redesign">Responsive Redesign</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 8px; color: #4ecdc4;">Budget</label>
+                        <input type="text" name="budget" placeholder="e.g., ₹10,000 - ₹25,000" style="width: 100%; padding: 12px; border: 2px solid rgba(78, 205, 196, 0.3); background: rgba(255,255,255,0.05); color: white; border-radius: 8px; font-size: 1rem;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 8px; color: #4ecdc4;">Project Details</label>
+                        <textarea name="message" required rows="5" style="width: 100%; padding: 12px; border: 2px solid rgba(78, 205, 196, 0.3); background: rgba(255,255,255,0.05); color: white; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" style="width: 100%; padding: 15px; background: linear-gradient(45deg, #ff6b6b, #4ecdc4); border: none; border-radius: 8px; color: white; font-size: 1.1rem; cursor: pointer; transition: transform 0.3s;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
